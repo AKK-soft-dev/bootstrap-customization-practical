@@ -1,0 +1,17 @@
+// Generate css file
+npx sass scss/app.scss css/app.css
+
+// To keep an eye on changes
+npx sass --watch scss/app.scss css/app.css
+
+// do not include source map file
+npx sass --no-source-map scss/app.scss css/app.css
+
+// combine above two command lines
+npx sass --no-source-map --watch scss/app.scss css/app.css
+
+// To generate minified css file
+npx sass --no-source-map --watch scss/app.scss css/app.css --style=compressed
+
+// to remove unused css styles
+npx purgecss --css css/app.css --content index.html --output css/output.css
